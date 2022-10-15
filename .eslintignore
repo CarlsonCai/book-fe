@@ -1,0 +1,4 @@
+# default
+dist
+types/components.d.ts
+src/vite-env.d.ts
