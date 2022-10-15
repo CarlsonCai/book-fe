@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <div class="login_logo">
-      <img width="180" height="180" style="margin-bottom: 16px" src="@/assets/book.png" />
+      <img width="180" height="180" src="@/assets/book.png" />
     </div>
     <el-card>
       <h2>Book</h2>
