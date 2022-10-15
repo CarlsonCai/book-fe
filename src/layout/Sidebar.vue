@@ -43,15 +43,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import {
-  Document,
-  Menu as IconMenu,
-  Location,
-  Setting
-} from '@element-plus/icons-vue'
+import { Document, Menu as IconMenu, Location, Setting } from '@element-plus/icons-vue'
 
-const isCollapse = ref(false)
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
@@ -65,5 +58,4 @@ const handleClose = (key: string, keyPath: string[]) => {
     width: 200px
     .el-menu-vertical-demo
         height: 100%
-    
 </style>

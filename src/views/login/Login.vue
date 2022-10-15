@@ -1,38 +1,26 @@
 <template>
-        <div class="login">
-        <div class="login_logo"> 
-            <img width="180" height="180" style="margin-bottom: 16px" src="@/assets/book.png" />
-        </div>
-        <el-card>
-            <h2>Book</h2>
-            <el-form
-            class="login-form"
-            ref="form"
-            >
-            <el-form-item prop="username">
-                <el-input  placeholder="Username"></el-input>
-            </el-form-item>
-            <el-form-item prop="password">
-                <el-input
-                placeholder="Password"
-                type="password"
-                ></el-input>
-            </el-form-item>
-            <el-form-item>
-                <el-button
-                class="login-button"
-                type="primary"
-                native-type="submit"
-                block
-                >Login</el-button>
-            </el-form-item>
-            <a class="forgot-password" href="https://oxfordinformatics.com/">Forgot password ?</a>
-            </el-form>
-        </el-card>
+  <div class="login">
+    <div class="login_logo">
+      <img width="180" height="180" style="margin-bottom: 16px" src="@/assets/book.png" />
     </div>
+    <el-card>
+      <h2>Book</h2>
+      <el-form class="login-form" ref="form">
+        <el-form-item prop="username">
+          <el-input placeholder="Username"></el-input>
+        </el-form-item>
+        <el-form-item prop="password">
+          <el-input placeholder="Password" type="password"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button class="login-button" type="primary" native-type="submit" block>Login</el-button>
+        </el-form-item>
+        <a class="forgot-password" href="https://oxfordinformatics.com/">Forgot password ?</a>
+      </el-form>
+    </el-card>
+  </div>
 </template>
 <style scoped>
-
 .login {
   display: flex;
   justify-content: center;
@@ -88,7 +76,7 @@ $teal: rgb(0, 124, 137);
   padding-bottom: 30px;
 }
 h2 {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   letter-spacing: 1px;
   font-family: Roboto, sans-serif;
   padding-bottom: 20px;

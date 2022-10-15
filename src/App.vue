@@ -2,8 +2,4 @@
   <router-view></router-view>
 </template>
 
-<script setup lang="ts">
-import DefaultLayout from '@/layout/DefaultLayout.vue'
-</script>
-
-
+<script setup lang="ts"></script>
