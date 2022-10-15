@@ -31,18 +31,21 @@
 }
 
 .login-button {
-  width: 100%;
   margin-top: 40px;
+  width: 100%;
 }
+
 .login-form {
   width: 290px;
 }
+
 .forgot-password {
   margin-top: 30px;
 }
 </style>
 <style lang="scss">
 $teal: rgb(0, 124, 137);
+
 .el-button--primary {
   background: $teal;
   border-color: $teal;
@@ -54,9 +57,11 @@ $teal: rgb(0, 124, 137);
     border-color: lighten($teal, 7);
   }
 }
+
 .login .el-input__inner:hover {
   border-color: $teal;
 }
+
 .login .el-input__prefix {
   background: rgb(238, 237, 234);
   left: 0;
@@ -64,32 +69,40 @@ $teal: rgb(0, 124, 137);
   left: 1px;
   top: 1px;
   border-radius: 3px;
+
   .el-input__icon {
     width: 30px;
   }
 }
+
 .login .el-input input {
   padding-left: 35px;
+  width: 100;
 }
+
 .login .el-card {
   padding-top: 0;
   padding-bottom: 30px;
 }
+
 h2 {
   font-family: 'Open Sans';
   letter-spacing: 1px;
   font-family: Roboto, sans-serif;
   padding-bottom: 20px;
 }
+
 a {
   color: $teal;
   text-decoration: none;
+
   &:hover,
   &:active,
   &:focus {
     color: lighten($teal, 7);
   }
 }
+
 .login .el-card {
   width: 340px;
   display: flex;
