@@ -20,6 +20,25 @@
     </el-card>
   </div>
 </template>
+
+<script lang="ts" setup>
+const payload = {
+  email: 'you@there.com',
+  password: 'password'
+}
+
+const requwstOption = {
+  method: 'POST',
+  body: JSON.stringify(payload)
+}
+
+fetch('http://localhost:8081/users/login', requwstOption)
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+  })
+</script>
+
 <style scoped>
 .login {
   display: flex;
