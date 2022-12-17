@@ -15,28 +15,28 @@
         <el-form-item>
           <el-button class="login-button" type="primary" native-type="submit" block>Login</el-button>
         </el-form-item>
-        <a class="forgot-password" href="https://oxfordinformatics.com/">Forgot password ?</a>
+        <a class="forgot-password">Forgot password ?</a>
       </el-form>
     </el-card>
   </div>
 </template>
 
 <script lang="ts" setup>
-const payload = {
-  email: 'you@there.com',
-  password: 'password'
-}
+import { useUserStore } from '@/stores/user'
+const user = useUserStore()
 
-const requwstOption = {
-  method: 'POST',
-  body: JSON.stringify(payload)
-}
-
-fetch('http://localhost:8081/users/login', requwstOption)
-  .then(res => res.json())
-  .then(data => {
-    console.log(data)
-  })
+computed(() => {})
+onMounted(async () => {
+  try {
+    const payload = {
+      email: 'you@there.com',
+      password: 'password'
+    }
+    await user.login(payload)
+  } catch (e) {
+    console.warn(e)
+  }
+})
 </script>
 
 <style scoped>

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // 非绝对地址的模块会基于这个目录去解析，默认值是当前目录
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -11,8 +12,18 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowJs": true, // 允许编译器编译JS，JSX文件
+    // ========================================================================================================
+    // 因為無法支援這種變數定義的檢查。建議在 tsconfig.json 中新增以下配置，使 tsc 編譯過程能夠檢查出定義了未使用的變數：
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // ========================================================================================================
+    "paths": {
+      // 配置具体如何解析 require/import 的导入，值是基于 baseUrl 路径的映射列表。https://www.typescriptlang.org/tsconfig#paths
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "types/auto-imports.d.ts", "types/components.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
