@@ -1,10 +1,10 @@
 import axios from 'axios'
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 
-type Result<T> = {
-  code: number
+export interface Result<T> {
+  error: string
   message: string
-  result: T
+  data: T
 }
 
 export class Request {
@@ -90,19 +90,19 @@ export class Request {
     return this.instance.request(config)
   }
 
-  public get<T = any>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<Result<T>>> {
+  public get<T = any>(url: string, config?: AxiosRequestConfig): Promise<Result<T>> {
     return this.instance.get(url, config)
   }
 
-  public post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<AxiosResponse<Result<T>>> {
+  public post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<Result<T>> {
     return this.instance.post(url, data, config)
   }
 
-  public put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<AxiosResponse<Result<T>>> {
+  public put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<Result<T>> {
     return this.instance.put(url, data, config)
   }
 
-  public delete<T = any>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<Result<T>>> {
+  public delete<T = any>(url: string, config?: AxiosRequestConfig): Promise<Result<T>> {
     return this.instance.delete(url, config)
   }
 }

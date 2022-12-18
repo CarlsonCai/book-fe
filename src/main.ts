@@ -5,7 +5,6 @@ import { pinia } from '@/stores'
 
 // style
 import '@/styles/index.sass'
-
 // 套件
 import ElementPlus from 'element-plus'
 

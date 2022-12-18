@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request, { Result } from '@/utils/request'
 
 /**
  * @description 登錄
@@ -6,6 +6,19 @@ import request from '@/utils/request'
  * @property {string} password - 密碼
  */
 
-export const userLogin = (payload: { email: string; password: string }) => {
+interface exanple {
+  token: IToken
+}
+interface IToken {
+  created_at: string
+  email: string
+  expiry: string
+  id: number
+  token: string
+  updated_at: string
+  user_id: number
+}
+
+export const userLogin = (payload: { email: string; password: string }): Promise<Result<exanple>> => {
   return request.post('api/users/login', payload)
 }

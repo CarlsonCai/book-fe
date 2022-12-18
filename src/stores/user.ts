@@ -13,7 +13,7 @@ export const useUserStore = defineStore({
           password: data.password
         }
         const res = await userLogin(reqData)
-        console.log(res)
+        console.log(res.data.token.created_at)
       } catch (error) {
         return Promise.reject(error)
       }
