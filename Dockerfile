@@ -11,7 +11,9 @@ RUN npm i -g pnpm@7.8.0 && \
 		pnpm install
 COPY . .
 ARG VUE_BUILD_MODE
-RUN pnpm run build --mode ${VUE_BUILD_MODE}
+RUN pnpm run build --mode production
+# RUN pnpm run build --mode ${VUE_BUILD_MODE}
+
 
 # production stage
 FROM nginx:1.20.1-alpine as production-stage
