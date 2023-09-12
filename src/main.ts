@@ -4,7 +4,7 @@ import router from '@/router'
 import { pinia } from '@/stores'
 
 // style
-import '@/styles/index.sass'
+// import '@/styles/index.sass'
 // 套件
 import ElementPlus from 'element-plus'
 

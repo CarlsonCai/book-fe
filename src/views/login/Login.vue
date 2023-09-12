@@ -22,20 +22,20 @@
 </template>
 
 <script lang="ts" setup>
-import { useUserStore } from '@/stores/user'
-const user = useUserStore()
+// import { useUserStore } from '@/stores/user'
+// const user = useUserStore()
 
 computed(() => {})
 onMounted(async () => {
-  try {
-    const payload = {
-      email: 'you@there.com',
-      password: 'password'
-    }
-    await user.login(payload)
-  } catch (e) {
-    console.warn(e)
-  }
+  // try {
+  //   const payload = {
+  //     email: 'you@there.com',
+  //     password: 'password'
+  //   }
+  //   await user.login(payload)
+  // } catch (e) {
+  //   console.warn(e)
+  // }
 })
 </script>
 
