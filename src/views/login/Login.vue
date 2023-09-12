@@ -27,6 +27,7 @@
 
 computed(() => {})
 onMounted(async () => {
+  console.log('==aaaa==')
   // try {
   //   const payload = {
   //     email: 'you@there.com',
