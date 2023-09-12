@@ -10,10 +10,10 @@ export interface Result<T> {
 export class Request {
   instance: AxiosInstance
   baseConfig: AxiosRequestConfig = { baseURL: '', timeout: 60000 }
-  constructor(config: AxiosRequestConfig) {
+  constructor(config: any) {
     this.instance = axios.create(Object.assign(this.baseConfig, config))
     this.instance.interceptors.request.use(
-      (config: AxiosRequestConfig) => {
+      (config: any) => {
         const token = localStorage.getItem('token') as string
         if (token) {
           config.headers!.Authorization = token
@@ -73,6 +73,7 @@ export class Request {
           default:
             message = `连接出错(${err.response.status})!`
         }
+        console.log(message)
         // 这里错误消息可以使用全局弹框展示出来
         // 比如element plus 可以使用 ElMessage
         // ElMessage({
